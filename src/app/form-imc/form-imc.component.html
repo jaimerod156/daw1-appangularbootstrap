@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+     Formulario IMC
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="txtnombre" class="form-label">Ingrese su nombre</label>
+            <input type="text" class="form-control"
+            [(ngModel)] = "imc.nombre"
+            id="txtnombre" placeholder="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="txtpeso" class="form-label">Ingrese peso en Kg.</label>
+            <input type="number" class="form-control"
+            [(ngModel)] = "imc.peso"
+            id="txtpeso" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="txttalla" class="form-label">Ingrese talla en Metros</label>
+            <input type="number" class="form-control" 
+            [(ngModel)] = "imc.talla"
+            id="txttalla" placeholder="name@example.com">
+        </div>
+        <hr>
+        <button type="button" class="btn btn-primary mt-3" (click)="calcularImc()">CALCULAR</button>
+        @if (mostrarResultado){         
+            <div class="alert alert-primary mt-2" role="alert">
+                su valor imc es : {{imc.valor}}, usted se encuentra {{imc.diagnostico}}
+            </div>
+        }
+        <hr>
+      <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">IMC</th>
+          <th scope="col">Diagnostico</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (paciente of pacientes; track $index) {
+            <tr>
+              <td>{{paciente.nombre}}</td>
+              <td>{{paciente.valorimc}}</td>
+              <td>{{paciente.diagnostico}}</td>
+            </tr>
+        }
+      </tbody>
+    </table>
+    </div>
+</div>
+
