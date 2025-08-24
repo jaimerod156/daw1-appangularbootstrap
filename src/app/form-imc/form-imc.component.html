@@ -13,13 +13,13 @@
             <label for="txtpeso" class="form-label">Ingrese peso en Kg.</label>
             <input type="number" class="form-control"
             [(ngModel)] = "imc.peso"
-            id="txtpeso" placeholder="name@example.com">
+            id="txtpeso" placeholder="ingrese peso">
         </div>
         <div class="mb-3">
             <label for="txttalla" class="form-label">Ingrese talla en Metros</label>
-            <input type="number" class="form-control" 
+            <input type="number" class="form-control"
             [(ngModel)] = "imc.talla"
-            id="txttalla" placeholder="name@example.com">
+            id="txttalla" placeholder="ingrese talla">
         </div>
         <hr>
         <button type="button" class="btn btn-primary mt-3" (click)="calcularImc()">CALCULAR</button>

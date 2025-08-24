@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormSumaComponent {
   
+  
   suma = {
     numero1:0,
     numero2:0,
     resultado:0
   }
   mostrarResultado = false;
+
   calcularSuma() {
     this.suma.resultado = Number(this.suma.numero1) + Number(this.suma.numero2);
     this.mostrarResultado = true;

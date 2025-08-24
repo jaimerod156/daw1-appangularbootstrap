@@ -14,6 +14,7 @@ export class InicioComponent {
 
   producto = {
     nombre : 'Producto A',
+    email: 'jjaime.rr@email.com',
     image: "https://dummyimage.com/100"
   }
 
