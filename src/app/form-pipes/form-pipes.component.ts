@@ -1,16 +1,19 @@
+import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-form-pipes',
   standalone: true,
-  imports: [],
+  imports: [
+    DatePipe, UpperCasePipe, CurrencyPipe
+  ],
   templateUrl: './form-pipes.component.html',
   styleUrl: './form-pipes.component.scss'
 })
 export class FormPipesComponent {
   
   currentDate = new Date();
-  
+
   clientes = [
     {nombre: 'Karla Gomez'},
     {nombre: 'luis salvatierra'},
